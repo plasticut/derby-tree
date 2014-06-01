@@ -1,0 +1,86 @@
+.tree {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    cursor: default;
+}
+
+.tree ul {
+    list-style: none;
+    padding-left: 14px;
+}
+
+.tree-node-header span {
+    padding-left: 2px;
+}
+
+.tree-node-loading {
+    display: none;
+    padding-left: 14px;
+}
+
+.tree li > .tree-node-header > .glyphicon-collapse-down {
+    display: none;
+}
+
+.tree li > .tree-node-header > .glyphicon-expand {
+    display: inline-block;
+}
+
+.tree .tree-expanded > .tree-node-header > .glyphicon-collapse-down {
+    display: inline-block;
+}
+
+.tree .tree-expanded > .tree-node-header > .glyphicon-expand {
+    display: none;
+}
+
+.tree .tree-expanded.tree-loading > .tree-node-loading {
+    display: inline-block;
+}
+
+
+.tree li > ul {
+    display: none;
+}
+
+.tree .tree-expanded > ul {
+    display: block;
+}
+
+.spin {
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    -webkit-animation: spin 2s infinite linear;
+    -moz-animation: spin 2s infinite linear;
+    -o-animation: spin 2s infinite linear;
+    animation: spin 2s infinite linear;
+}
+
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

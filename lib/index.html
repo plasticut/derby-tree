@@ -1,0 +1,28 @@
+<index:>
+    <ul class="tree" on-click="clickNode($event, $element)">
+    {{each items}}
+        {{if this}}
+        <view name="tree:node" item="{{this}}"></view>
+        {{/}}
+    {{/}}
+    </ul>
+
+
+<tree:node:>
+    <li class="tree-node {{@item.className}}{{if @item.expanded}} tree-expanded{{/}}{{if @item.loading}} tree-loading{{/}}">
+        <div class="tree-node-header">
+            <i class="glyphicon glyphicon-collapse-down"></i>
+            <i class="glyphicon glyphicon-expand"></i>
+            <span>{{@item.name}}</span>
+        </div>
+        <ul>
+        {{each @item.items}}
+            {{if this}}
+            <view name="tree:node" item="{{this}}"></view>
+            {{/}}
+        {{/}}
+        </ul>
+        <div class="tree-node-loading">
+            <i class="glyphicon glyphicon-refresh spin"></i> {{unbound loadingText}}
+        </div>
+    </li>

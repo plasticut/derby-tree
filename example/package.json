@@ -1,0 +1,14 @@
+{
+  "name": "derby-tree-example",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "derby-starter": "~0.1.2",
+    "derby": "~0.6"
+  },
+  "scripts": {
+    "postinstall": "bower install",
+    "start": "node ./"
+  }
+}
