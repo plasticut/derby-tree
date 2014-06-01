@@ -1,20 +1,21 @@
 derby-tree
 ==========
 
-###Derby tree
+#Derby tree
 
-#Dynamic loading of tree items
+###Dynamic loading of tree items
+
 ```html
 <view name="tree" on-items="onGetItems()"></view>
 ```
 
 ```javascript
-    app.proto.onGetItems = function(model, next) {
-        $.json('/tree?id=' + model.get('id'), next);
-    };
+app.proto.onGetItems = function(model, next) {
+    $.json('/tree?id=' + model.get('id'), next);
+};
 ```
 
-#Static tree items
+###Static tree items
 ```html
 <view name="tree" items="{{_page.items}}"></view>
 ```
