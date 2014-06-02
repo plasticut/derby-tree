@@ -4,8 +4,10 @@ var app = module.exports = derby.createApp('app', __filename);
 
 global.app = app;
 
-app.loadViews (__dirname);
-app.loadStyles(__dirname + '/../bower_components/bootstrap/dist/css/bootstrap.min.css');
+app.serverUse(module, 'derby-static');
+app.use(require('derby-bundle-bootstrap'), { modules: [] });
+
+app.loadViews(__dirname);
 app.use(require('../../'));
 
 app.proto.onGetItems = function(model, next) {
